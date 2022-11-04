@@ -28,6 +28,3 @@ const auth = getAuth(app);
 
 // export {onAuthStateChanged, createUserWithEmailAndPassword, signOut, arrayUnion, arrayRemove, firebase, db, updateDoc, limit, collection, signInAnonymously, updateProfile, query, where, setDoc, addDoc, doc, getDocs ,auth, signInWithEmailAndPassword, FieldValue};
 export {onAuthStateChanged , db , auth}; 
-
-
-
