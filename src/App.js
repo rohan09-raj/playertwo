@@ -23,6 +23,7 @@ const style = {
 export default function App() {
   const [open, setOpen] = useState(false);
   const [openTwo, setOpenTwo] = useState(false);
+  const [openThree, setOpenThree] = useState(false);
   const handleClick = () => setOpen(!open);
   const [number, setNumber] = useState('');
 
@@ -31,7 +32,10 @@ export default function App() {
     setOpenTwo(!openTwo);
   };
 
-  console.log(number);
+  const handleClickThree = () => {
+    setOpenTwo(false);
+    setOpenThree(!openThree);
+  };
 
   return (
     <div>
@@ -84,7 +88,53 @@ export default function App() {
             align='center'
             style={{marginBottom: '10px'}}
           >
-            Enter your Mobile Number
+            Enter Your Mobile Number
+          </Typography>
+          <PhoneInput
+            country='in'
+            value={number}
+            onChange={(value) => {
+              setNumber(value);
+            }}
+            enableSearch={true}
+            countryCodeEditable={false}
+            inputStyle={{width: '100%'}}
+            searchStyle={{width: '95%', padding: '10px'}}
+            enableClickOutside={false}
+            searchPlaceholder='Search for your Country'
+          />
+          <Button
+            onClick={handleClickTwo}
+            variant='contained'
+            style={{marginTop: '10px'}}
+          >
+            Continue
+          </Button>
+        </Box>
+      </Modal>
+
+      <Modal
+        open={openTwo}
+        onClose={handleClickTwo}
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'
+      >
+        <Box sx={style}>
+          <Typography
+            id='modal-modal-title'
+            variant='h6'
+            component='h2'
+            align='center'
+            style={{marginBottom: '10px'}}
+          >
+            Enter Your Code
+          </Typography>
+          <Typography
+            id='modal-modal-title'
+            align='center'
+            style={{marginBottom: '10px'}}
+          >
+            Enter The Code Sent To Provided Number
           </Typography>
           <PhoneInput
             country='in'
