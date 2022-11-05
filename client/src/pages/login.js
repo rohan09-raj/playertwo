@@ -20,8 +20,7 @@ const style = {
   p: 4,
 };
 
-export default function App() {
-  const [open, setOpen] = useState(false);
+const Login = ({open, setOpen}) => {
   const [openTwo, setOpenTwo] = useState(false);
   const [openThree, setOpenThree] = useState(false);
   const handleClick = () => setOpen(!open);
@@ -39,9 +38,6 @@ export default function App() {
 
   return (
     <div>
-      <Button onClick={handleClick} variant='contained'>
-        Login
-      </Button>
       <Modal
         open={open}
         onClose={handleClick}
@@ -160,4 +156,6 @@ export default function App() {
       </Modal>
     </div>
   );
-}
+};
+
+export default Login;
