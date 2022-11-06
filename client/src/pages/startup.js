@@ -1,13 +1,15 @@
-import React, {useState} from 'react';
-import styles from './startup.module.css';
-import Header from '../components/Header/Header';
-import Valo from '../images/valo_bg.png';
-import Apex from '../images/apex-legend.png';
-import Cod from '../images/cod_bg.png';
-import Csgo from '../images/csgo_bg.png';
-import Fortnite from '../images/fortnite.png';
-import Minecraft from '../images/minecraft.png';
-import Explore from '../images/explore.png';
+import React from 'react';
+import styles from "./startup.module.css";
+import Header from "../components/Header/Header";
+import Valo from "../images/valo_bg.png";
+import Apex from "../images/apex-legend.png";
+import Cod from "../images/cod_bg.png";
+import Csgo from "../images/csgo_bg.png";
+import Fortnite from "../images/fortnite.png";
+import Minecraft from "../images/minecraft.png";
+import Explore from "../images/explore.png";
+import Footer from '../components/Footer/Footer';
+
 
 export default function Startup() {
   return (
@@ -18,8 +20,9 @@ export default function Startup() {
           <h1> Find your Player Two</h1>
           <p>
             {' '}
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's das dasdas daswsd as
+            Get ready to step into a world filled with gamers. 
+            Be it a full blown Battle Royale or Quick Deathmatch, 
+            you'll find your player two with just a swipe.
           </p>
           <div className={styles.startup__buttons}>
             <button> Explore </button>
@@ -61,16 +64,18 @@ export default function Startup() {
           </h1>
           <p>
             {' '}
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not .{' '}
+            Player Two is built for gamers all around who want to find their game-mate(s) 
+            Spend more time playing and less time waiting in loobbies for random parties. 
+            Player Two is a one stop solution that links with most of your existing Player IDs such as steam, epic games etc.
+            and helps you find your ultimate gaming buddies. 
+            {' '}
           </p>
         </div>
         <div className={styles.startup__explore__img}>
           <img src={Explore} alt='' />
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -18,6 +18,7 @@
     align-items: center;
     justify-content: space-evenly;
     color: var(--text-light);
+    transform: translateX(30px);    
 }
 
 .player_two {
