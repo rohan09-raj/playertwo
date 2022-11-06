@@ -1,0 +1,57 @@
+:root {
+    --background-dark: #090D15; 
+    --text-light: #ffffff;
+    --background-blue: #035FFC;
+}
+
+.header {
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    padding: 30px;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--text-light);
+}
+
+.player_two {
+    font-family: poppins;
+}
+
+.player_two h3 {
+    font-weight: 400;
+
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 50%;
+}
+
+.navbar ul li {
+    color: rgb(196, 196, 196);
+    cursor: pointer;
+}
+
+.navbar ul li:hover {
+    color: #ffffff;
+}   
+
+
+.createAccount__button {
+    padding: 10px 17px;
+    border-radius: 20px;
+    background-color: var(--background-blue);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
