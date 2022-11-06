@@ -1,0 +1,13 @@
+/* font-family: 'Russo One', sans-serif; */
+:root {
+    --background-dark: #090D15; 
+    --text-light: #ffffff;
+    --background-blue: #035FFC;
+}
+
+.footer {
+    display: flex;
+    background-color: var(--background-blue);
+    width: 100%;
+    height: 40vh;
+}

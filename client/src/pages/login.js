@@ -20,7 +20,7 @@ const style = {
   p: 4,
 };
 
-const Login = ({open, setOpen}) => {
+export default function Login ({open, setOpen}) {
   const [openTwo, setOpenTwo] = useState(false);
   const [openThree, setOpenThree] = useState(false);
   const handleClick = () => setOpen(!open);
@@ -157,5 +157,3 @@ const Login = ({open, setOpen}) => {
     </div>
   );
 };
-
-export default Login;
