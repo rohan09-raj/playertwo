@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './ProfileCard.module.css';
 
-const colors = ['#0088FE', '#00C49F', '#FFBB28'];
+const colors = ['/cod.jpg', '/valorant.jpg', '/amongus.jpeg'];
 const delay = 2500;
 
 const ProfileCard = () => {
@@ -38,12 +38,13 @@ const ProfileCard = () => {
             className={styles.slideshowSlider}
             style={{transform: `translate3d(${-index * 100}%, 0, 0)`}}
           >
-            {colors.map((backgroundColor, index) => (
-              <div
+            {colors.map((image, index) => (
+              <img
                 className={styles.slide}
                 key={index}
-                style={{backgroundColor}}
-              ></div>
+                src={`${process.env.PUBLIC_URL}/assets/images${image}`}
+                alt=''
+              />
             ))}
           </div>
 
@@ -59,6 +60,24 @@ const ProfileCard = () => {
                 }}
               ></div>
             ))}
+          </div>
+        </div>
+        <div className={styles.stats}>
+          <h1 className={styles.stats__username}>Mad Dog</h1>
+          <div className={styles.stats__container}>
+            <h2 className={styles.stats__title}>Favourite Genres</h2>
+            <hr />
+            <h3 className={styles.stats__detail}>Action, Racing, Combat</h3>
+          </div>
+          <div className={styles.stats__container}>
+            <h2 className={styles.stats__title}>Games Played</h2>
+            <hr />
+            <h3 className={styles.stats__detail}>8</h3>
+          </div>
+          <div className={styles.stats__container}>
+            <h2 className={styles.stats__title}>Total Playtime</h2>
+            <hr />
+            <h3 className={styles.stats__detail}>567 hours</h3>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import {Input, InputAdornment} from '@mui/material';
 import React from 'react';
 import {AiTwotoneShop, AiFillDollarCircle} from 'react-icons/ai';
-import {IoSettings, IoLibrarySharp} from 'react-icons/io5';
+import {IoSettings, IoLibrarySharp, IoLogOut} from 'react-icons/io5';
 import {ImDrive} from 'react-icons/im';
 import {GiAchievement} from 'react-icons/gi';
 import {RiSearchLine} from 'react-icons/ri';
@@ -46,8 +46,13 @@ const Dashboard = () => {
             <IoSettings size='2em' />
             <p className={styles.nav__option_text}>Settings</p>
           </button>
-          <hr className={styles.divider} />
-          <button className={styles.nav__option}>Log Out</button>
+          <div className={styles.logout}>
+            <hr className={styles.divider} />
+            <button className={styles.nav__option}>
+              <IoLogOut size='2em' />
+              <p className={styles.nav__option_text}>Log Out</p>
+            </button>
+          </div>
         </nav>
         <section className={styles.swipe}>
           <Input
@@ -67,7 +72,7 @@ const Dashboard = () => {
         </section>
         <section className={styles.messages}>
           <div className={styles.user}>
-            <h4 className={styles.user__name}>Username</h4>
+            <h4 className={styles.user__name}>Mad Dog</h4>
             <img
               className={styles.user__picture}
               src={`${process.env.PUBLIC_URL}/assets/images/avatar.jpg`}

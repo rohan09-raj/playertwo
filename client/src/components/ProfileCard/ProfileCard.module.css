@@ -1,12 +1,36 @@
 .card {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 90%;
   height: 500px;
   background-color: var(--color-fontgrey);
   margin: 40px;
   border-radius: 20px;
+}
+
+.stats {
+  width: 60%;
+}
+
+.stats__username {
+  font-family: 'Luckiest Guy', sans-serif;
+  font-size: 3rem;
+  margin: 0px 30px;
+  font-weight: 400;
+}
+
+.stats__container {
+  margin: 30px;
+}
+
+.stats__title {
+  font-family: 'Luckiest Guy', sans-serif;
+  color: var(--color-bluegrey);
+  font-weight: 400;
+}
+
+.stats__detail {
+  margin: 10px 0px;
 }
 
 .slideshow {
