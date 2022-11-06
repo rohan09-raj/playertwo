@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import GoogleIcon from '@mui/icons-material/Google';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import {Button, Modal, Box, Typography} from '@mui/material';
 import PhoneInput from 'react-phone-input-2';
+import OTPInput from 'otp-input-react';
 import 'react-phone-input-2/lib/bootstrap.css';
 
 const style = {
@@ -25,6 +27,8 @@ export default function Login ({open, setOpen}) {
   const [openThree, setOpenThree] = useState(false);
   const handleClick = () => setOpen(!open);
   const [number, setNumber] = useState('');
+  const [otp, setOtp] = useState();
+  const navigate = useNavigate();
 
   const handleClickTwo = () => {
     setOpen(false);
@@ -34,6 +38,11 @@ export default function Login ({open, setOpen}) {
   const handleClickThree = () => {
     setOpenTwo(false);
     setOpenThree(!openThree);
+  };
+
+  const handleNavigation = () => {
+    setOpenThree(false);
+    navigate('/dashboard');
   };
 
   return (
@@ -100,7 +109,7 @@ export default function Login ({open, setOpen}) {
             searchPlaceholder='Search for your Country'
           />
           <Button
-            onClick={handleClickTwo}
+            onClick={handleClickThree}
             variant='contained'
             style={{marginTop: '10px'}}
           >
@@ -110,8 +119,8 @@ export default function Login ({open, setOpen}) {
       </Modal>
 
       <Modal
-        open={openTwo}
-        onClose={handleClickTwo}
+        open={openThree}
+        onClose={handleClickThree}
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
@@ -132,21 +141,27 @@ export default function Login ({open, setOpen}) {
           >
             Enter The Code Sent To Provided Number
           </Typography>
-          <PhoneInput
-            country='in'
-            value={number}
-            onChange={(value) => {
-              setNumber(value);
+          <OTPInput
+            value={otp}
+            onChange={(val) => setOtp(val)}
+            autoFocus
+            OTPLength={6}
+            otpType='number'
+            disabled={false}
+            secure
+            style={{
+              marginLeft: '20px',
             }}
-            enableSearch={true}
-            countryCodeEditable={false}
-            inputStyle={{width: '100%'}}
-            searchStyle={{width: '95%', padding: '10px'}}
-            enableClickOutside={false}
-            searchPlaceholder='Search for your Country'
+            inputStyles={{
+              border: '1px solid #666666',
+              borderRadius: '6px',
+              align: 'center',
+              color: 'gray',
+              fontWeight: '400',
+            }}
           />
           <Button
-            onClick={handleClickTwo}
+            onClick={handleNavigation}
             variant='contained'
             style={{marginTop: '10px'}}
           >

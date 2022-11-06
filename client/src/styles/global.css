@@ -1,7 +1,13 @@
-:root {
-    --background-dark: #090D15; 
-}
-
 ul {
-    list-style-type: none;
+  list-style-type: none;
+}
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-purple: #171a3e;
+  --color-blue: #1768fa;
+  --color-bluegrey: #373752;
+  --color-darkbluegrey: #1d1d2c;
+  --color-fontgrey: #696b86;
+  --background-dark: #090d15;
 }
