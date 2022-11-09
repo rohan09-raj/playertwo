@@ -23,34 +23,35 @@ const Dashboard = () => {
               alt='Player Two Logo'
             />
             <h1 className={styles.nav__logo_text}>Player Two</h1>
-          </div>
-          <hr className={styles.divider} />
-          <button className={styles.nav__option}>
-            <AiTwotoneShop size='2em' />
-            <p className={styles.nav__option_text}>Games</p>
-          </button>
-          <button className={styles.nav__option}>
-            <IoLibrarySharp size='2em' />
-            <p className={styles.nav__option_text}>Library</p>
-          </button>
-          <hr className={styles.divider} />
-          <button className={styles.nav__option}>
-            <GiAchievement size='2em' />{' '}
-            <p className={styles.nav__option_text}>Achievements</p>
-          </button>
-          <button className={styles.nav__option}>
-            <BsPeopleFill size='2em' />{' '}
-            <p className={styles.nav__option_text}>Social</p>
-          </button>
-          <button className={styles.nav__option}>
-            <IoSettings size='2em' />
-            <p className={styles.nav__option_text}>Settings</p>
-          </button>
-          <div className={styles.logout}>
-            <hr className={styles.divider} />
+          </div>   
+          <hr className={styles.divider1} />
+          <div className={styles.navbar}>
             <button className={styles.nav__option}>
-              <IoLogOut size='2em' />
-              <p className={styles.nav__option_text}>Log Out</p>
+              <AiTwotoneShop size='2em' />
+              <p className={styles.nav__option_text}>Games</p>
+            </button>
+            <button className={styles.nav__option}>
+              <IoLibrarySharp size='2em' />
+              <p className={styles.nav__option_text}>Library</p>
+            </button>
+            <button className={styles.nav__option}>
+              <GiAchievement size='2em' />{' '}
+              <p className={styles.nav__option_text}>Achievements</p>
+            </button>
+            <button className={styles.nav__option}>
+              <BsPeopleFill size='2em' />{' '}
+              <p className={styles.nav__option_text}>Social</p>
+            </button>
+            <button className={styles.nav__option}>
+              <IoSettings size='2em' />
+              <p className={styles.nav__option_text}>Settings</p>
+            </button>
+          </div>
+          <hr className={styles.divider2} />
+          <div className={styles.logout}>
+            <button className={styles.nav__option3}>
+              <IoLogOut size='1.8em' />
+              <p className={styles.nav__option_text}>Logout</p>
             </button>
           </div>
         </nav>
@@ -62,13 +63,13 @@ const Dashboard = () => {
             aria-label='Search'
             startAdornment={
               <InputAdornment position='start'>
-                <RiSearchLine color='#696b86' size='1.5em' />
+                <RiSearchLine color='#696b86' size='1.3em' />
               </InputAdornment>
             }
             style={{color: 'white'}}
           />
           <ProfileCard />
-          <SwipeControls />
+          {/* <SwipeControls /> */}
         </section>
         <section className={styles.messages}>
           <div className={styles.user}>

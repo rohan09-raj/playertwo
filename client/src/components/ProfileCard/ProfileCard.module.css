@@ -1,4 +1,4 @@
-.card {
+/* .card {
   display: flex;
   align-items: center;
   width: 90%;
@@ -51,7 +51,7 @@
   border-radius: 40px;
 }
 
-/* Buttons */
+
 
 .slideshowDots {
   text-align: center;
@@ -72,3 +72,64 @@
 .slideshowDot.active {
   background-color: #6a0dad;
 }
+
+ */
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #000000; 
+  background-size: cover;
+  opacity: 0.40; 
+}
+
+.card__images {
+  display: flex;
+  width: 100%;
+}
+
+.card__images img {
+  width: 100%;
+}
+
+.card__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 10;
+}
+
+.card__slide {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+}
+.arrows {
+  transform: translate(-20px, -10px);
+}
+
+
+
+/* .game {
+  display: flex;
+  position: relative;
+  width: ;
+} */

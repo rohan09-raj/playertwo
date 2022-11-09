@@ -1,0 +1,26 @@
+.user {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: right;
+  }
+  
+  .user img {
+    width: 50px;
+    border-radius: 50%;
+  }
+  
+  .user > div {
+    text-align: right;
+    line-height: 1.2;
+    margin-right: 15px;
+  }
+  
+  .user > div > h3 {
+    font-weight: 400;
+  }
+  
+  .user > div > p {
+    font-size: 0.9rem;
+  }
+  
