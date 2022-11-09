@@ -1,0 +1,51 @@
+.modal__title {
+  font-family: 'Luckiest Guy', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modal__subtitle {
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal__resend {
+  background: none;
+  cursor: pointer;
+  border: none;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal__button {
+  background-color: var(--color-greyblack);
+  border: 2px solid var(--color-bluegrey);
+  border-radius: 10px;
+  box-shadow: var(--color-bluegrey) 4px 4px 0 0;
+  color: var(--color-paperwhite);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0px 10px;
+  line-height: 50px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 10px;
+}
+
+.modal__button:hover {
+  color: var(--color-bluegrey);
+  background-color: var(--color-white);
+}
+
+.modal__button:active {
+  box-shadow: var(--color-bluegrey) 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}

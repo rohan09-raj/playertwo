@@ -3,8 +3,8 @@ import {Routes, Route} from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
 import Loading from '../components/Loading/Loading';
 
-const Startup = lazy(() => import('../pages/startup'));
-const Login = lazy(() => import('../pages/login'));
+const Startup = lazy(() => import('../pages/startup/startup'));
+const Login = lazy(() => import('../pages/login/login'));
 const Dashboard = lazy(() => import('../pages/dashboard/dashboard'));
 const NotFound = lazy(() => import('../pages/not-found.js'));
 

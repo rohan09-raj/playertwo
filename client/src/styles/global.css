@@ -1,13 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style-type: none;
 }
+
 :root {
   --color-white: #ffffff;
+  --color-paperwhite: #f0f0f0;
+  --color-lightblue: #f0f8ff;
   --color-black: #000000;
   --color-purple: #171a3e;
-  --color-blue: #1768fa;
+  --color-blue: #035ffc;
+  --color-blue2: #0346ba;
   --color-bluegrey: #373752;
   --color-darkbluegrey: #1d1d2c;
   --color-fontgrey: #696b86;
   --background-dark: #090d15;
+  --color-greyblack: #28282d;
+  --color-glass: #ffffff15;
+  --color-lightgrey: #c4c4c4;
 }

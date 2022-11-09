@@ -1,0 +1,155 @@
+@import '../../styles/global.css';
+
+.startup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background: url('../../../public/assets/images/valorant-bg.jpg') no-repeat
+    left;
+  align-items: center;
+}
+
+.startup::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--color-black);
+  background-size: cover;
+  opacity: 0.45;
+}
+
+.startup__main {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 70%;
+  z-index: 10;
+  transform: translateX(-76px);
+  margin-top: 50px;
+  color: var(--color-lightblue);
+}
+
+.startup__main > h1 {
+  font-size: 100px;
+  font-family: 'Bungee', cursive;
+}
+
+.startup__main > p {
+  margin-top: 20px;
+  margin-left: 5px;
+  width: 450px;
+  font-family: 'Quicksand';
+  line-height: 1.6;
+}
+
+.startup__buttons {
+  margin-left: 5px;
+  width: 40%;
+  margin-top: 30px;
+  display: flex;
+}
+
+.startup__buttons > button {
+  border-radius: 30px;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+}
+
+.startup__buttons > button > a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.startup__buttons > button:last-of-type {
+  margin-left: 10px;
+  border: 2px solid var(--color-blue);
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 135px;
+  padding: 10px;
+}
+
+.startup__buttons > button:last-of-type > p {
+  color: var(--color-blue);
+}
+
+.startup__buttons > button:first-of-type {
+  padding: 10px 20px;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.startup__buttons svg {
+  height: 25px;
+}
+
+.startup__games {
+  width: 100%;
+  display: flex;
+  background-color: var(--color-blue2);
+}
+
+.games {
+  display: flex;
+  background-color: var(--color-blue);
+  width: 100%;
+  height: 120px;
+  color: var(--color-white);
+  align-items: center;
+  justify-content: space-evenly;
+  transform: rotate(-1deg);
+}
+
+.startup__explore {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-dark);
+  position: relative;
+  padding: 30px;
+}
+
+.startup__explore__text {
+  width: 50%;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+
+.startup__explore__text > h1 {
+  font-size: 50px;
+  font-family: 'poppins', sans-serif;
+  font-weight: 700;
+  color: var(--color-lightblue);
+  line-height: 1.2;
+}
+
+.startup__explore__text > h1 > span {
+  color: var(--color-blue);
+}
+
+.startup__explore__text > p {
+  color: var(--color-white);
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.6;
+  margin-top: 40px;
+}
+
+.startup__explore__img {
+  width: 70%;
+  transform: translateY(-100px);
+}
+
+.startup__explore__img > img {
+  width: 100%;
+}

@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import GoogleIcon from '@mui/icons-material/Google';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import {Button, Modal, Box, Typography} from '@mui/material';
+import {Modal, Box} from '@mui/material';
 import PhoneInput from 'react-phone-input-2';
 import OTPInput from 'otp-input-react';
+
 import 'react-phone-input-2/lib/bootstrap.css';
+import styles from './login.module.css';
 
 const style = {
   position: 'absolute',
@@ -22,7 +24,21 @@ const style = {
   p: 4,
 };
 
-export default function Login ({open, setOpen}) {
+const styleTwo = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  bgcolor: 'background.paper',
+  borderRadius: '6px',
+  boxShadow: 24,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'justify',
+  p: 4,
+};
+
+const Login = ({open, setOpen}) => {
   const [openTwo, setOpenTwo] = useState(false);
   const [openThree, setOpenThree] = useState(false);
   const handleClick = () => setOpen(!open);
@@ -46,7 +62,8 @@ export default function Login ({open, setOpen}) {
   };
 
   return (
-    <div>
+    <>
+      {/* GetStartedModal */}
       <Modal
         open={open}
         onClose={handleClick}
@@ -54,31 +71,17 @@ export default function Login ({open, setOpen}) {
         aria-describedby='modal-modal-description'
       >
         <Box sx={style}>
-          <Typography
-            id='modal-modal-title'
-            variant='h6'
-            component='h2'
-            align='center'
-          >
-            GET STARTED
-          </Typography>
-          <Button
-            onClick={handleClickTwo}
-            variant='contained'
-            style={{margin: '10px'}}
-          >
+          <h1 className={styles.modal__title}>GET STARTED</h1>
+          <button onClick={handleClickTwo} className={styles.modal__button}>
             Sign in with Mobile Number <PhoneIphoneIcon />
-          </Button>
-          <Button
-            onClick={handleClickTwo}
-            variant='contained'
-            style={{margin: '10px'}}
-          >
+          </button>
+          <button onClick={handleClickTwo} className={styles.modal__button}>
             Sign in with Google <GoogleIcon />
-          </Button>
+          </button>
         </Box>
       </Modal>
 
+      {/* MobileNumberModal */}
       <Modal
         open={openTwo}
         onClose={handleClickTwo}
@@ -86,15 +89,7 @@ export default function Login ({open, setOpen}) {
         aria-describedby='modal-modal-description'
       >
         <Box sx={style}>
-          <Typography
-            id='modal-modal-title'
-            variant='h6'
-            component='h2'
-            align='center'
-            style={{marginBottom: '10px'}}
-          >
-            Enter Your Mobile Number
-          </Typography>
+          <h1 className={styles.modal__title}>Enter Your Mobile Number</h1>
           <PhoneInput
             country='in'
             value={number}
@@ -103,44 +98,34 @@ export default function Login ({open, setOpen}) {
             }}
             enableSearch={true}
             countryCodeEditable={false}
-            inputStyle={{width: '100%'}}
+            inputStyle={{
+              width: '100%',
+              margin: '20px 0px',
+              border: '3px solid #28282d',
+              fontFamily: 'Poppins',
+            }}
             searchStyle={{width: '95%', padding: '10px'}}
             enableClickOutside={false}
             searchPlaceholder='Search for your Country'
           />
-          <Button
-            onClick={handleClickThree}
-            variant='contained'
-            style={{marginTop: '10px'}}
-          >
+          <button onClick={handleClickThree} className={styles.modal__button}>
             Continue
-          </Button>
+          </button>
         </Box>
       </Modal>
 
+      {/* OTPModal */}
       <Modal
         open={openThree}
         onClose={handleClickThree}
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
       >
-        <Box sx={style}>
-          <Typography
-            id='modal-modal-title'
-            variant='h6'
-            component='h2'
-            align='center'
-            style={{marginBottom: '10px'}}
-          >
-            Enter Your Code
-          </Typography>
-          <Typography
-            id='modal-modal-title'
-            align='center'
-            style={{marginBottom: '10px'}}
-          >
+        <Box sx={styleTwo}>
+          <h1 className={styles.modal__title}>Enter Your Code</h1>
+          <h3 className={styles.modal__subtitle}>
             Enter The Code Sent To Provided Number
-          </Typography>
+          </h3>
           <OTPInput
             value={otp}
             onChange={(val) => setOtp(val)}
@@ -150,25 +135,27 @@ export default function Login ({open, setOpen}) {
             disabled={false}
             secure
             style={{
-              marginLeft: '20px',
+              margin: '10px 0px 20px 20px',
             }}
             inputStyles={{
-              border: '1px solid #666666',
+              border: '3px solid #28282d',
               borderRadius: '6px',
               align: 'center',
-              color: 'gray',
               fontWeight: '400',
+              fontSize: '60px',
+              height: '60px',
+              width: '60px',
+              color: '#28282d',
             }}
           />
-          <Button
-            onClick={handleNavigation}
-            variant='contained'
-            style={{marginTop: '10px'}}
-          >
+          <button className={styles.modal__resend}>RESEND</button>
+          <button onClick={handleNavigation} className={styles.modal__button}>
             Continue
-          </Button>
+          </button>
         </Box>
       </Modal>
-    </div>
+    </>
   );
 };
+
+export default Login;

@@ -1,10 +1,9 @@
 import React from 'react';
-import Login from '../../pages/login';
+import Login from '../../pages/login/login';
 
 import styles from './Header.module.css';
 
-export default function Header() {
-  const [open, setOpen] = React.useState(false);
+export default function Header({open, setOpen}) {
   const handleClick = () => setOpen(!open);
   return (
     <header className={styles.header}>
@@ -14,10 +13,18 @@ export default function Header() {
           <h3> Player Two </h3>
         </div>
         <ul>
-          <li> Home </li>
-          <li> Players </li>
-          <li> Games </li>
-          <li> Explore </li>
+          <li>
+            <a href='#home'>Home</a>
+          </li>
+          <li>
+            <a href='#players'>Players</a>
+          </li>
+          <li>
+            <a href='#games'>Games</a>
+          </li>
+          <li>
+            <a href='#explore'>Explore</a>
+          </li>
         </ul>
         <button className={styles.createAccount__button} onClick={handleClick}>
           Create Account
