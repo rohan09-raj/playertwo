@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import GoogleIcon from '@mui/icons-material/Google';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import {Modal, Box} from '@mui/material';
 import PhoneInput from 'react-phone-input-2';
 import OTPInput from 'otp-input-react';
+
 
 import 'react-phone-input-2/lib/bootstrap.css';
 import styles from './login.module.css';
@@ -43,8 +44,10 @@ const Login = ({open, setOpen}) => {
   const [openThree, setOpenThree] = useState(false);
   const handleClick = () => setOpen(!open);
   const [number, setNumber] = useState('');
-  const [otp, setOtp] = useState();
+  const [otp, setOtp] = useState('');
   const navigate = useNavigate();
+  const [valid, setValid] = useState(false);
+  const [validOtp, setValidOtp] = useState(false);
 
   const handleClickTwo = () => {
     setOpen(false);
@@ -52,15 +55,34 @@ const Login = ({open, setOpen}) => {
   };
 
   const handleClickThree = () => {
+    if(valid) {
     setOpenTwo(false);
     setOpenThree(!openThree);
+    }
   };
 
   const handleNavigation = () => {
+    if(validOtp) {
     setOpenThree(false);
     navigate('/dashboard');
+    }
   };
 
+  const handleValidOtp = () => {
+    if(otp.length < 6) {
+      setValidOtp(false);
+      console.log('hello')
+    }
+    else {
+      setValidOtp(true);
+      console.log('true')
+    }
+  };
+
+  // call handleValidOtp function when otp changes
+  useEffect(() => {
+    handleValidOtp();
+  }, [otp]);
   return (
     <>
       {/* GetStartedModal */}
@@ -96,6 +118,15 @@ const Login = ({open, setOpen}) => {
             onChange={(value) => {
               setNumber(value);
             }}
+            isValid={(value) => {
+              if (!value.match(/^[0-9]{12}$/)) {
+                  setValid(false);
+                  return 'Invalid mobile number!';
+              } else {
+                  setValid(true);
+                  return true;
+              }
+          }}
             enableSearch={true}
             countryCodeEditable={false}
             inputStyle={{
@@ -148,6 +179,7 @@ const Login = ({open, setOpen}) => {
               color: '#28282d',
             }}
           />
+          {!validOtp && <p className={styles.modal__error}>Invalid OTP</p>}
           <button className={styles.modal__resend}>RESEND</button>
           <button onClick={handleNavigation} className={styles.modal__button}>
             Continue

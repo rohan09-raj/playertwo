@@ -49,3 +49,9 @@
   box-shadow: var(--color-bluegrey) 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
+
+.modal__error {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
