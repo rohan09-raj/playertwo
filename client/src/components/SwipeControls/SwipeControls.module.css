@@ -1,4 +1,4 @@
-.swipe {
+/* .swipe {
   background-color: var(--color-fontgrey);
   padding: 20px 40px;
   border-radius: 50px;
@@ -20,7 +20,7 @@
 
 .swipe__button:hover {
   transform: scale(1.2);
-}
+} */
 
 /* #pass:hover {
   color: #ac0000;
@@ -33,3 +33,62 @@
 #like:hover {
   color: #1dbe01;
 } */
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 40px; 
+}
+
+.controls__circle {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 15px;
+  transform: rotate();
+  cursor: pointer;
+}
+
+.plus__icon {
+  transform: rotate(45deg);
+  border-color: #91B8DA;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgb(160, 160, 160);
+}
+
+.ins {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.ins > p {
+  margin-left: 5px;
+}
+
+.circle__icon {
+  border-color: #F5828A;
+}
+
+.square__icon {
+  border-color: #D3A6CE;
+}
+
+.triangle__icon {
+  border-color: #41CBD7;
+}

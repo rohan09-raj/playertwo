@@ -87,13 +87,13 @@ const ProfileCard = () => {
         </div>
       </div> */}
 
-      {/* <div className={styles.card}>
+      <div className={styles.card}>
         <div className={styles.card__images}>
           <img src={`${process.env.PUBLIC_URL}/assets/images/valorant.webp`} alt="" />
         </div>
         <div className={styles.card__content}>
           <div className={styles.user}> 
-            
+            <UserGameInfo /> 
           </div>
           <div className={styles.card__slide}>
             <Games img="" game="VALORANT" genre="Shooting" gamesPlayed="5" hours="225" />
@@ -103,8 +103,8 @@ const ProfileCard = () => {
             </div>
           </div>
         </div>
-      </div> */}
-      <div className={styles.card}>
+      </div>
+      {/* <div className={styles.card}>
         {user.games.map(({gameName, genre, gamesPlayed, winPercentage, matchesPlayed, id, hoursPlayed, img}) => {
           return <div className={styles.games}>
             <div className={styles.card__images}>
@@ -130,7 +130,7 @@ const ProfileCard = () => {
             </div>
           </div> 
           })}
-      </div>
+      </div> */}
     </>
   );
 };

@@ -7,6 +7,8 @@ const Startup = lazy(() => import('../pages/startup/startup'));
 const Login = lazy(() => import('../pages/login/login'));
 const Dashboard = lazy(() => import('../pages/dashboard/dashboard'));
 const NotFound = lazy(() => import('../pages/not-found.js'));
+// const Messages = lazy(() => import('../pages/messages/messaages'));
+
 
 const IndexRoutes = () => {
   return (
