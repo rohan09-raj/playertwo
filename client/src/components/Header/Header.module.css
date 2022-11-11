@@ -19,10 +19,13 @@
 
 .player_two {
   font-family: poppins;
+  display: flex;
+  align-items: center;
 }
 
 .player_two h3 {
   font-weight: 400;
+  margin: 0px 10px;
 }
 
 .navbar ul {

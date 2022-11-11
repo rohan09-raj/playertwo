@@ -49,6 +49,7 @@ const ProfileForm = () => {
           <button
             onClick={() => {
               if (page === FormTitles.length - 1) {
+                console.log(formData)
                 navigate('../dashboard')
               } else {
                 setPage((currPage) => currPage + 1);

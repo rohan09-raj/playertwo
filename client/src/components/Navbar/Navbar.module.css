@@ -1,16 +1,16 @@
 .divider1 {
-    width: 70%;
-    border-top: 0.1px;
-    border-color: var(--color-fontgrey);
-    margin-top: 20px;
-    margin-bottom: 20px;
+  width: 70%;
+  border-top: 0.1px;
+  border-color: var(--color-fontgrey);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .divider2 {
-    border-top: 0.1px;
-    width: 70%;
-    border-color: var(--color-fontgrey);
-    margin-top: 180px;
+  border-top: 0.1px;
+  width: 70%;
+  border-color: var(--color-fontgrey);
+  margin-top: 180px;
 }
 
 .nav {
@@ -29,10 +29,6 @@
   transform: translateX(-10px) translateY(8px);
 }
 
-.nav__logo_img {
-  height: 40px;
-}
-
 .nav__logo_text {
   /* font-family: 'Luckiest Guy', sans-serif; */
   font-size: 1.7rem;
@@ -48,7 +44,9 @@
   height: 48%;
 }
 
-.nav__option , .nav__option2, .nav__option3{
+.nav__option,
+.nav__option2,
+.nav__option3 {
   display: flex;
   align-items: center;
   font-size: 0.9rem;
@@ -73,10 +71,11 @@
   padding: 6px;
 }
 
-.nav__option:hover , .nav__option2:hover{
+.nav__option:hover,
+.nav__option2:hover {
   background-color: var(--color-blue);
   /* background-color: rgb(49, 111, 235); */
-  color: var(--color-white);  
+  color: var(--color-white);
   box-shadow: rgba(23, 104, 250, 0.07) 0px 1px 2px,
     rgba(23, 104, 250, 0.07) 0px 2px 4px, rgba(23, 104, 250, 0.07) 0px 4px 8px,
     rgba(23, 104, 250, 0.07) 0px 8px 16px,
@@ -88,11 +87,10 @@
   margin: 0px 15px;
   font-weight: 500;
 }
-                   
+
 .logout {
   margin-top: 30px;
   background-color: #14112F;
   border-radius: 20px;
   border: 1px solid rgb(56, 56, 56);
 }
- 

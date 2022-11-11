@@ -3,13 +3,13 @@ import Login from '../../pages/login/login';
 
 import styles from './Header.module.css';
 
-export default function Header({open, setOpen}) {
+export default function Header({ open, setOpen }) {
   const handleClick = () => setOpen(!open);
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <div className={styles.player_two}>
-          {/* logo */}
+          <img src={`${process.env.PUBLIC_URL}/logo.svg`} height='50px' width='50px' alt='Player Two' />
           <h3> Player Two </h3>
         </div>
         <ul>

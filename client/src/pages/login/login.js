@@ -71,11 +71,9 @@ const Login = ({ open, setOpen }) => {
   const handleValidOtp = () => {
     if (otp.length < 6) {
       setValidOtp(false);
-      console.log('hello')
     }
     else {
       setValidOtp(true);
-      console.log('true')
     }
   };
 
@@ -122,7 +120,7 @@ const Login = ({ open, setOpen }) => {
             isValid={(value) => {
               if (!value.match(/^[0-9]{12}$/)) {
                 setValid(false);
-                return 'Invalid mobile number!';
+                return <p className={styles.modal__error}>Invalid mobile number!</p>;
               } else {
                 setValid(true);
                 return true;
