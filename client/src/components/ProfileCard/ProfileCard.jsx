@@ -1,9 +1,9 @@
-import React, { useState, useRef , useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './ProfileCard.module.css';
-import {BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill } from "react-icons/bs"
+import { BsFillArrowRightCircleFill, BsFillArrowLeftCircleFill } from "react-icons/bs"
 import Games from "../Games/Games";
 import UserGameInfo from '../UserGameInfo/UserGameInfo';
-import {User} from "../../mock/user_data";
+import { User } from "../../mock/user_data";
 
 const colors = ['/cod.jpg', '/valorant.jpg', '/amongus.jpeg'];
 const delay = 2500;
@@ -92,14 +92,14 @@ const ProfileCard = () => {
           <img src={`${process.env.PUBLIC_URL}/assets/images/valorant.webp`} alt="" />
         </div>
         <div className={styles.card__content}>
-          <div className={styles.user}> 
-            <UserGameInfo /> 
+          <div className={styles.user}>
+            <UserGameInfo />
           </div>
           <div className={styles.card__slide}>
-            <Games img="" game="VALORANT" genre="Shooting" gamesPlayed="5" hours="225" />
+            <Games img="" gameName="VALORANT" genre="Shooting" matchesPlayed="5" hoursPlayed="225" winPercentage="50%" />
             <div className={styles.arrows}>
-              <BsFillArrowLeftCircleFill size={"1.6em"} style={{"marginRight": "10px"}}/>
-              <BsFillArrowRightCircleFill size={"1.6em"}/>
+              <BsFillArrowLeftCircleFill size={"1.6em"} style={{ "marginRight": "10px" }} />
+              <BsFillArrowRightCircleFill size={"1.6em"} />
             </div>
           </div>
         </div>
