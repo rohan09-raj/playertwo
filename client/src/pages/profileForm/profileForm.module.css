@@ -1,0 +1,85 @@
+@import '../../styles/global.css';
+
+.form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PROGRESS BAR */
+.progressbar {
+  width: 400px;
+  height: 5px;
+  background-color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.progressbar div {
+  width: 50.0%;
+  height: 100%;
+  background-color: var(--color-bluegrey);
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.form__container {
+  width: 450px;
+  background-color: var(--color-paperwhite);
+  border-radius: 10px;
+  box-shadow: 0 0 15px 1px var(--color-fontgrey);
+  display: flex;
+  flex-direction: column;
+}
+
+.form__container .header {
+  flex: 20%;
+  display: grid;
+  place-items: center;
+  margin-top: 30px;
+  font-family: 'Luckiest Guy', sans-serif;
+  font-size: 1.25rem;
+}
+
+.header h1 {
+  font-weight: 400;
+}
+
+.form__container .body {
+  flex: 70%;
+  margin: 0px 20px;
+}
+
+.form__container .footer {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.form__container .footer button {
+  background-color: var(--color-greyblack);
+  border: 2px solid var(--color-bluegrey);
+  border-radius: 10px;
+  box-shadow: var(--color-bluegrey) 4px 4px 0 0;
+  color: var(--color-paperwhite);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0px 30px;
+  line-height: 50px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 10px;
+}
+
+.form__container .footer button:hover {
+  color: var(--color-bluegrey);
+  background-color: var(--color-white);
+}

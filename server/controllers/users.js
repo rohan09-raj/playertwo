@@ -1,4 +1,4 @@
-import userQuery from '../models/user.js';
+import userQuery from '../models/users.js';
 
 const createUser = async (req, res) => {
   try {

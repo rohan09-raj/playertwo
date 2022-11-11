@@ -1,0 +1,2 @@
+export const ONE_FIVE_TIMES_ZERO = 100000;
+export const NINE_FIVE_TIMES_ZERO = 900000;
