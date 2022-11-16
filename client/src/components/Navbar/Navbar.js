@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "./Navbar.module.css";
 import { AiTwotoneShop, AiFillDollarCircle } from 'react-icons/ai';
 import { IoSettings, IoLibrarySharp, IoLogOut } from 'react-icons/io5';
@@ -8,7 +8,7 @@ import { BsPersonFill, BsPeopleFill } from 'react-icons/bs';
 import { SiGooglemessages } from "react-icons/si";
 import { IoIosPeople } from "react-icons/io";
 
-export default function Navbar() {
+export default function Navbar({ handleClick }) {
   return (
     <nav className={styles.nav}>
       <div className={styles.nav__logo}>
@@ -24,7 +24,7 @@ export default function Navbar() {
         </button>
         <button className={styles.nav__option}>
           <SiGooglemessages size='2em' />
-          <p className={styles.nav__option_text}>Messages</p>
+          <p className={styles.nav__option_text} onClick={() => handleClick(true)}>Messages</p>
         </button>
         <button className={styles.nav__option}>
           <IoIosPeople size='2em' />
