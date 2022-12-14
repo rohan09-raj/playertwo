@@ -1,24 +1,25 @@
+import React, { useState } from 'react';
 import {Input, InputAdornment} from '@mui/material';
-import React from 'react';
 import {RiSearchLine} from 'react-icons/ri';
 import {TfiAngleDown} from "react-icons/tfi";
-
 import styles from './dashboard.module.css';
 import SwipeControls from '../../components/SwipeControls/SwipeControls';
 import ProfileCard from '../../components/ProfileCard/ProfileCard';
 import Navbar from '../../components/Navbar/Navbar';
+import Messages from '../../components/Messages/Messages';
 
 const Dashboard = () => {
-  const showMessages = () => {
-        
+  const [messages, setMessages] = useState(false)
+  const handleClick = () =>  {
+    setMessages(true);
   }
-
 
   return (
     <>
       <div className={styles.container}>
-        <Navbar />
-        <section className={styles.swipe}>
+        <Navbar handleClick={() => handleClick(messages)}/>
+        {!messages 
+        ? <section className={styles.swipe}>
           <Input
             className={styles.swipe__search}
             type='text'
@@ -33,7 +34,7 @@ const Dashboard = () => {
           />
           <ProfileCard />
           <SwipeControls />
-        </section>
+        </section> : <Messages />}
         <section className={styles.messages}>
           <div className={styles.user}>
             <img

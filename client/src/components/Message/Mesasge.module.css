@@ -1,0 +1,110 @@
+@import "../../styles/global.css";
+
+.message__left {
+    display: flex;
+    align-items: top;
+    margin-top: 30px;
+}
+
+.message__right {
+    display: flex;
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+
+.message__left img , .message__right img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.message__name, .message__nameRight {
+    display: flex;
+    flex-direction: column;
+}
+
+.message__name {
+    margin-left: 10px;
+}
+
+.message__nameRight {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.message__name > h4 , .message__nameRight > h4 {
+    font-weight: 500;  
+    font-size: 15px;
+}
+
+.messageBox , .messageBox__right  {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    border-radius: 20px;
+    text-align: left; 
+    background-color: #1E1E26;
+    padding: 15px;
+    max-width: 350px;
+    margin-top: 10px;
+    display: block;
+    word-wrap: break-word;
+}
+
+.messageBox__right > p::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    bottom: 90%;
+    right: 0px;
+    border: .95rem solid transparent;
+    border-top: none;
+    transform: rotate(25deg);
+    border-bottom-color: #1E1E26;
+}
+
+.messageBox > p::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    bottom: 90%;
+    left: 0px;
+    border: .95rem solid transparent;
+    border-top: none;
+    transform: rotate(-25deg);
+    border-bottom-color: #1E1E26;
+}
+
+/* content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 100%;
+	left: 0em;
+	border: .55rem solid transparent;
+	border-top: none;
+
+
+	border-bottom-color: #fff;
+	filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1)); */
+
+
+
+/* content: "";
+width: 0px;
+height: 0px;
+position: absolute;
+border-left: 24px solid #fff;
+border-right: 12px solid transparent;
+border-top: 12px solid #fff;
+border-bottom: 20px solid transparent;
+left: 32px;
+bottom: -24px */
+
+.messageBox > p {
+    text-align: left;
+}
+
+

@@ -2,8 +2,8 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import {HiArrowRightCircle} from 'react-icons/hi2';
-
 import styles from './startup.module.css';
+import GamingCard from '../../components/GamingCard/GamingCard';
 
 const Startup = () => {
   const [open, setOpen] = React.useState(false);
@@ -65,6 +65,17 @@ const Startup = () => {
             alt=''
             width={'140px'}
           />
+        </div>
+      </section>
+      <section className={styles.startup__players}>
+        <div className={styles.player__content}>
+            <h1> Connect with gamers all around the world </h1>
+            <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book </p>
+        </div> 
+        <div className={styles.player__cards}>
+          <GamingCard img={`${process.env.PUBLIC_URL}/assets/images/valo__card.jpeg}`}/>
+          <GamingCard img={`${process.env.PUBLIC_URL}/assets/images/among_us.webp}`}/>
+          <GamingCard img={`${process.env.PUBLIC_URL}/assets/images/minecraft_card.png}`}/>
         </div>
       </section>
       <section className={styles.startup__explore} id='explore'>
